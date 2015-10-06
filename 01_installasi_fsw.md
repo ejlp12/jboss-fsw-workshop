@@ -47,7 +47,7 @@ java -jar jboss-fsw-installer-6.0.0.GA-redhat-4.jar -console
 3. Jalankan FSW
 
 ```
-ce /Servers/FSW_6/jboss-eap-6.1/bin
+cd /Servers/FSW_6/jboss-eap-6.1/bin
 ./standalone
 ```
 
