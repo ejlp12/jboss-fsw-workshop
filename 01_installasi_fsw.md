@@ -61,9 +61,9 @@ Tunggu sampai muncul tulisan berikut di terminal window anda:
 
 4. Test beberapa URL web berikut dengan mengakses menggunakan browser
 
-      [http://localhost:8080/](http://localhost:8080/) - EAP default page
-      [http://localhost:8080/s-ramp-ui](http://localhost:8080/s-ramp-ui) - dengan login fswAdmin
-      [http://localhost:8080/bpel-console](http://localhost:8080/bpel-console)
+   * [http://localhost:8080/](http://localhost:8080/) - EAP default page
+   * [http://localhost:8080/s-ramp-ui](http://localhost:8080/s-ramp-ui) - dengan login fswAdmin
+   * [http://localhost:8080/bpel-console](http://localhost:8080/bpel-console)
       
 5. Instal Maven:
 
