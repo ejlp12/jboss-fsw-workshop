@@ -1,5 +1,7 @@
 Untuk men-develop menggunakan FSW versi 6.0 kita membuatuhkan JBoss Developer Studio (JBDS) versi 7.1.x dengan JBoss Developer Studio Integration Stack (Switchyard Tooling)
 
+## Instalasi JBDS
+
 Ada baiknya ada lihat juga dulu video instalasi JBDS dan Switchyard Tooling berikut:
 
 * Video: [Episode 4 : Eclipse Tooling Introduction](https://vimeo.com/57879770)
@@ -16,10 +18,10 @@ Plugin Integration Stack dapat di-install dengan dua cara yaitu (1) instalasi se
 
 (1) Instalasi online akan memudahkan untuk update plugin dikemudian hari.
 
-- Pada *JBoss Central** view klik tab *SOftware/Update* dibagian bawah.
-- Kemudian klik cekbox *JBoss Integration and SOA Development* lalu klik tombol *Install*
+- Pada **JBoss Central** view klik tab **SOftware/Update** dibagian bawah.
+- Kemudian klik cekbox **JBoss Integration and SOA Development** lalu klik tombol **Install**
 
-![image](https://cloud.githubusercontent.com/assets/3068071/10314259/1486cfb4-6c7e-11e5-8fde-51ca31fc9912.png)
+![image](https://cloud.githubusercontent.com/assets/3068071/10314801/f21a82c4-6c80-11e5-9eec-1647a16fe78d.png)
 
 (2) Instalasi offline bisa dilakukan tanpa koneksi internet. File installer plugin (berupa file ZIP) bisa didownload terlebih dahulu.
 
@@ -69,6 +71,16 @@ Sebelum kita memulai development menggunakan JBDS, kita perlu instal Apache Mave
   ```
   
 ## Setting Maven Repository
+
+Maven perlu kita setup agar project maven di JBDS mengetahui letak **library repository** sehingga project bisa dic-compile dan di-build.
+
+Maven repository bisa berada di sebuah direktori lokal maupun remote (di tempat terpisah), jika tidak menemukan library yang dibutuhkan di repository lokal maka Maven akan mendownload dari remote repository . Lokal repositori lokal berarada di direktori `~/.m2/repository/`.
+
+Red Hat menyediakan Maven repository file yang berisi library (JAR files) yang bisa didownload kemudian diekstrak di repositori lokal. 
+
+Selain itu Red Hat juga menyediakan remote repository yang bisa diakses lewat Internet sehingga file library dapat di-download saat dibutuhkan.
+
+## Setting Remote Maven Repository
 
 Jika anda terkoneksi ke internet, anda bisa men-setup agar Maven menggunakan online repository. 
 Caranya, anda buka file `~/.m2/setting.xml` dan edit sehingg memiliki elemen *profiles* seperti ini:
