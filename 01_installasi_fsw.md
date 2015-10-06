@@ -9,7 +9,27 @@ Ada baiknya anda menonton video berikut sebelum memulai instalasi:
    Jika anda menggunakan Mac OS-X, jangan khawatir FSW tetap bisa diinstal dan dijalankan, tetapi tidak disupport oleh Red Hat.
    
    > [X] Jangan menggunakan JDK/JRE 1.8 untuk installasi
-
+   
+   Instalasi Orale JDK 1.7:
+   
+   ```
+   rpm -ivh jdk-7u79-linux-x64.rpm
+   export PATH=/usr/java/jdk1.7.0_79/bin:$PATH
+   ```
+   
+   Check Java version dengan perintah
+   
+   ```
+   java -version
+   ```
+   Ouput:
+   
+   ```
+   Java version "1.7.0_79"
+   Java(TM) SE Runtime Environment (build 1.7.0_79-b02)
+   Java HotSpot(TM) 64-Bit Server VM (build 24.79-b02, mixed mode)
+   ```
+   
 2. Install dengan mode GUI (interaktif), buka console atau terminal lalu jalankan perintah berikut:
 
 ```
