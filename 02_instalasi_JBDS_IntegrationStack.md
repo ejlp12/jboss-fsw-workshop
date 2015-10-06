@@ -2,7 +2,7 @@ Untuk men-develop menggunakan FSW versi 6.0 kita membuatuhkan JBoss Developer St
 
 Ada baiknya ada lihat juga dulu video instalasi JBDS dan Switchyard Tooling berikut:
 
-[Episode 4 : Eclipse Tooling Introduction](https://vimeo.com/57879770)
+* Video: [Episode 4 : Eclipse Tooling Introduction](https://vimeo.com/57879770)
 
 Detail cara instalasi di dokumentasi dapat dilihat di link berikut:
 
@@ -11,9 +11,11 @@ Detail cara instalasi di dokumentasi dapat dilihat di link berikut:
 
 ## Instal Apache Maven
 
-Ekstrak file installer maven yang didownload `unzip ` 
+Ekstrak file installer maven yang didownload dengan perintah `unzip apache-maven-3.3.3-bin.zip` 
 
-Pindahkan ke folder tertentu misalnya `/home/redhat/maven`
+Pindahkan ke folder tertentu misalnya `/home/redhat/maven` dengan perintah `mv apache-maven-3.3.3-bin /home/redhat/maven`
+
+Setting *PATH* environment variable agar dapat mengeksekusi command `mvn` yang ada di direktori `/home/redhat/maven/bin`
 
 ```
 export PATH=$PATH:/home/redhat/maven/bin
