@@ -35,5 +35,71 @@ Default locale: en_US, platform encoding: UTF-8
 OS name: "mac os x", version: "10.10.3", arch: "x86_64", family: "mac"
 ```
 
+## Setting Maven Repository
+
+Jika anda terkoneksi ke internet, anda bisa men-setup agar Maven menggunakan online repository. 
+Caranya, anda buka file `~/.m2/setting.xml` dan edit sehingg memiliki elemen *profiles* seperti ini:
+
+```xml
+<profiles>
+    <!-- Profile with online repositories required by Fuse Service Works -->
+    <profile>
+      <id>fsw-online-repos</id>
+      <repositories>
+        <repository>
+          <id>jboss-ga-repository</id>
+          <url>http://maven.repository.redhat.com/techpreview/all</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        <repository>
+          <id>jboss-public-repository</id>
+          <url>http://repository.jboss.org/nexus/content/repositories/public/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>jboss-ga-plugin-repository</id>
+          <url>http://maven.repository.redhat.com/techpreview/all</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>jboss-public-plugin-repository</id>
+          <url>http://repository.jboss.org/nexus/content/repositories/public/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>    
+  </profiles>
+
+  <activeProfiles>
+    <!-- Activation of the Fuse Service Works profile -->
+    <activeProfile>fsw-online-repos</activeProfile>
+  </activeProfiles>
+```
+
+Detail cara setup juga dijelaskan di dokumentasi:
+
+[6.4. Configuring Maven to Use the Online Repositories](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Fuse_Service_Works/6.0/html/Getting_Started_Guide/chap-Maven_Repositories.html#Configure_the_JBoss_EAP_Integration_Maven_Repository_Using_the_Maven_Settings)
 
 
